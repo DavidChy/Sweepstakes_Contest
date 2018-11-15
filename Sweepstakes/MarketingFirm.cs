@@ -18,7 +18,7 @@ namespace SweepstakesContest
         {
             Sweepstakes sweepstakes = new Sweepstakes();
             sweepstakes.Name = UserInterface.CreateSweepstakes();
-            sweepstakesManager.AddSweepstakes(sweepstakes);
+            sweepstakesManager.InsertSweepstakes(sweepstakes);
         }
     }
 }
