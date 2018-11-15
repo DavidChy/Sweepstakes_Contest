@@ -10,6 +10,7 @@ namespace SweepstakesContest
     {
         static void Main(string[] args)
         {
+            UserInterface.MenuSelect();
         }
     }
 }
