@@ -20,5 +20,30 @@ namespace SweepstakesContest
             sweepstakes.Name = UserInterface.CreateSweepstakes();
             sweepstakesManager.InsertSweepstakes(sweepstakes);
         }
+
+        public void FirmMenu()
+        {
+            UserInterface.SweepstakesCreator();
+            CreateSweepstake();
+            string input = UserInterface.MakeMoreSweepstakes();
+
+            if (input.ToLower().Trim() == "y")
+            {
+                while (input.ToLower().Trim() == "y")
+                {
+                    CreateSweepstake();
+                    input = UserInterface.MakeMoreSweepstakes();
+                }
+            }
+            else if (input.ToLower().Trim() == "n")
+            {
+                UserInterface.GoToSweepstakes();
+                return;
+            }
+            else
+            {
+                throw new ApplicationException("That input was not valid!");
+            }
+        }
     }
 }

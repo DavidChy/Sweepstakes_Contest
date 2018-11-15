@@ -11,6 +11,11 @@ namespace SweepstakesContest
         static void Main(string[] args)
         {
             UserInterface.MenuSelect();
+            MarketingFirm marketing = new MarketingFirm(manager);
+            Sweepstakes sweep = new Sweepstakes();
+            marketing.FirmMenu();
+            sweep.SweepstakesMenu();
+            Console.ReadLine();
         }
     }
 }
